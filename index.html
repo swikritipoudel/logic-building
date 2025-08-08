@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = [
+  { name: "Apple", color: "red" },
+  { name: "Banana", color: "yellow" },
+  { name: "Mango", color: "yellow" },
+  {name: "strawberry", color:"red"},
+  {name: "guava", color:"green"},
+  {name: "orange", color:"orange"},
+];
+
+// let reds = []
+// let yellows = []
+// let greens = []
+// let oranges = []
+
+// fruits.forEach(fruit=>{
+//     if(fruit.color==="red"){
+//         reds.push(fruit)
+//     }
+
+//     else if(fruit.color==="yellow"){
+//         yellows.push(fruit)
+//     }
+
+//     else if(fruit.color==="green"){
+//         greens.push(fruit)
+//     }
+
+//     else if(fruit.color==="orange"){
+//         oranges.push(fruit)
+//     }
+// })
+
+// console.log(reds)
+// console.log(yellows)
+// console.log(greens)
+// console.log(oranges)
+
+//better way to do it
+const grouped = {};
+
+fruits.forEach(fruit => {
+  if (!grouped[fruit.color]) {
+    grouped[fruit.color] = []; // create array if not exists
+  }
+  grouped[fruit.color].push(fruit);
+});
+
+console.log(grouped);
+
+
+    </script>
+</body>
+</html>
