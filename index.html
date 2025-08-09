@@ -7,7 +7,14 @@
 </head>
 <body>
     <script>
-        const fruits = [
+
+// 1. Group by Property
+
+// Goal: Group fruits by color.
+
+
+
+  const fruits = [
   { name: "Apple", color: "red" },
   { name: "Banana", color: "yellow" },
   { name: "Mango", color: "yellow" },
@@ -45,16 +52,56 @@
 // console.log(oranges)
 
 //better way to do it
-const grouped = {};
 
-fruits.forEach(fruit => {
-  if (!grouped[fruit.color]) {
-    grouped[fruit.color] = []; // create array if not exists
+// let grouped = {}
+
+// fruits.forEach(fruit=>{
+//   if(!grouped[fruit.color]){
+//     grouped[fruit.color] = []
+//   }
+// grouped[fruit.color].push(fruit.name)
+  
+// })
+
+// console.log(grouped)
+
+
+
+
+
+
+
+
+
+
+
+
+
+//2. Custom map() Function
+
+// Goal: Write your own version of the Array.prototype.map() method.
+
+// function customMap(arr, callback) {
+//   // implement logic
+// }
+
+
+
+function customMap(arr, callback){
+let result = []
+
+  arr.forEach(num=>{
+    let newn = callback(num)
+    result.push(newn)
+  })
+
+  return result;
   }
-  grouped[fruit.color].push(fruit);
-});
+  
 
-console.log(grouped);
+  let nums = [1,2,3,4]
+  const doubled = customMap(nums, n=> n*2)
+  console.log(doubled)
 
 
     </script>
