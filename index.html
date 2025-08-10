@@ -87,21 +87,59 @@
 
 
 
-function customMap(arr, callback){
-let result = []
+// function customMap(arr, callback){
+// let result = []
 
-  arr.forEach(num=>{
-    let newn = callback(num)
-    result.push(newn)
-  })
+//   arr.forEach(num=>{
+//     let newn = callback(num)
+//     result.push(newn)
+//   })
 
-  return result;
-  }
+//   return result;
+//   }
   
 
-  let nums = [1,2,3,4]
-  const doubled = customMap(nums, n=> n*2)
-  console.log(doubled)
+//   let nums = [1,2,3,4]
+//   const doubled = customMap(nums, n=> n*2)
+//   console.log(doubled)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  3. Find Second Highest Number in Array
+
+// Goal: Return the second largest number from an array.
+// No sort allowed!
+
+
+const arr = [3, 5, 1, 9, 7];
+
+for(let i=0; i<arr.length; i++){
+
+   for(let j=0; j<arr.length; j++){
+    if(arr[i]>arr[j]){
+      [arr[i], arr[j]] = [arr[j], arr[i]] 
+    }
+      }
+}
+
+console.log(arr)
 
 
     </script>
