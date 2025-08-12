@@ -128,19 +128,89 @@
 // No sort allowed!
 
 
-const arr = [3, 5, 1, 9, 7];
+// const arr = [3, 5, 1, 9, 7];
 
-for(let i=0; i<arr.length; i++){
+// for(let i=0; i<arr.length; i++){
 
-   for(let j=0; j<arr.length; j++){
-    if(arr[i]>arr[j]){
-      [arr[i], arr[j]] = [arr[j], arr[i]] 
-    }
-      }
-}
+//    for(let j=0; j<arr.length; j++){
+//     if(arr[i]>arr[j]){
+//       [arr[i], arr[j]] = [arr[j], arr[i]] 
+//     }
+//       }
+// }
 
-console.log(arr)
+// console.log(arr[1])
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 🌟 4. String Compression
+
+// Goal: Compress a string like "aaabbccaaa" into "a3b2c2a3".
+
+let word = "aaabbccaaaa"
+let count = 1
+let comword = ""
+
+// for(let i=0; i<word.length; i++){
+//   if(word[i] != word[i-1]){
+//   for(let j=i; j<word.length+1; j++){
+//     if(word[i] === word[j]){
+//       count++
+//     }
+
+//     else{
+//       comword += `${word[i]}${count}`
+//       count = 0
+//       break
+//     }
+//   }
+// }
+// }
+
+// console.log(comword)
+
+
+//Better Approach
+
+// for(let i=0; i<word.length; i++){
+//   if(word[i]===word[i+1]){
+//     count++
+//   }
+//   else{
+//   comword += `${word[i]}${count}`
+//   count = 1
+//   }
+// }
+
+// console.log(comword)
 
     </script>
 </body>
