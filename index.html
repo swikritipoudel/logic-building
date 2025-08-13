@@ -175,9 +175,9 @@
 
 // Goal: Compress a string like "aaabbccaaa" into "a3b2c2a3".
 
-let word = "aaabbccaaaa"
-let count = 1
-let comword = ""
+// let word = "aaabbccaaaa"
+// let count = 1
+// let comword = ""
 
 // for(let i=0; i<word.length; i++){
 //   if(word[i] != word[i-1]){
@@ -211,6 +211,55 @@ let comword = ""
 // }
 
 // console.log(comword)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 5. Balanced Brackets Checker
+
+// Goal: Check if a string has balanced parentheses/brackets:
+
+// "({[]})" // true
+// "([)]"   // false
+
+
+let parentheses = "([)]"
+let count = 0
+
+for(let i=0; i<parentheses.length; i++){
+   for(let j=0; j<parentheses.length; j++){
+    if (parentheses[i]===parentheses[j]){
+        count++
+    }
+    }
+}
+
+if(count%2 === 0){
+    console.log("balanced parentheses")
+}
+
+else{
+    console.log("unbalanced parentheses")
+}
+
+
 
     </script>
 </body>
